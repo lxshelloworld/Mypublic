@@ -1,0 +1,15 @@
+name: Run Custom Action Demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ①checkout
+        uses: actions/checkout@v3
+      - name: ②action
+        uses: ./.github/actions/hello-action
