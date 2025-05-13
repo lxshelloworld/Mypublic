@@ -5,6 +5,8 @@ runs:
   steps:
     - name: 确保 hello.sh 可执行
       run: chmod +x ./hello.sh
+      shell: bash
+      
     - name: 打印信息
       run: ./hello.sh
       shell: bash
