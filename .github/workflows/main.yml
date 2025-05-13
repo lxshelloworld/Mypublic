@@ -11,5 +11,5 @@ jobs:
     steps:
       - name: ①checkout
         uses: actions/checkout@v3
-      - name: ②action
+      - name: Run local custom action
         uses: ./.github/actions/hello-action
