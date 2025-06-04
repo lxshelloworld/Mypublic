@@ -1,8 +1,0 @@
-name: "Hello Action"
-description: "一个打印欢迎信息的自定义 Action"
-runs:
-  using: "composite"
-  steps:
-    - name: 打印信息
-      run: echo "Hello from custom action"
-      shell: bash
