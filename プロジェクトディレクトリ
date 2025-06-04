@@ -1,0 +1,14 @@
+note-app/
+├── backend/                # Java Spring Bootバックエンド
+│   ├── src/
+│   ├── Dockerfile          # バックエンド用Dockerファイル
+│   └── pom.xml             # Java依存関係
+├── frontend/               # Reactフロントエンド
+│   ├── src/
+│   ├── Dockerfile          # フロントエンド用Dockerファイル
+│   └── package.json        # Node依存関係
+├── docker-compose.yml      # 全サービスを一括起動するファイル
+├── .github/
+│   └── workflows/
+│       └── ci.yml          # GitHub Actionsの設定ファイル
+└── README.md               # プロジェクト説明ドキュメント
