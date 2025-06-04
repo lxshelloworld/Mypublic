@@ -1,0 +1,8 @@
+| 層（コンポーネント） | 技術              |               説明            |
+| -------------- | ---------------------- | --------------------------    |
+| フロントエンド | React, Tailwind CSS    | ノートのUI画面、APIとの通信    |
+| バックエンド   | Spring Boot (Java)     | REST API、認証、ノート処理など |
+| データベース   | PostgreSQL             | ユーザー・ノート・タグの保存    |
+| 認証方式       | JWT（JSON Web Token）  | トークンベースの認証と認可     |
+| コンテナ化     | Docker, Docker Compose | 環境構築を自動化・統一         |
+| CI/CD          | GitHub Actions         | 自動ビルド・テスト・デプロイ   |
