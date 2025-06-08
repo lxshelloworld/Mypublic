@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/auth")
 public class UserController {
 
     @Autowired
@@ -17,4 +17,5 @@ public class UserController {
     public String register(@RequestBody User user) {
         return userService.register(user);
     }
+
 }
