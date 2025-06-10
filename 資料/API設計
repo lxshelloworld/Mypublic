@@ -1,8 +1,8 @@
 | メソッド| エンドポイント     | 説明         | リクエストボディ       | レスポンス例             |
 | ------ | ------------------ | ------------ | ---------------------- | ----------------------- |
-| POST   | /api/auth/register | ユーザー登録 | {email, password}      | {message: "登録成功"}    |
-| POST   | /api/auth/login    | ログイン     | {email, password}      | {token: "JWTトークン"}   |
-| GET    | /api/notes         | ユーザーのノート一覧取得 | -          | \[{id, title, content}]  |
-| POST   | /api/notes         | 新規ノート作成 | {title, content, tags} | {id, title, content}   |
-| PUT    | /api/notes/{id}    | ノート編集     | {title, content, tags} | {id, title, content}   |
+| POST   | /api/auth/register | ユーザー登録 | {email, password}      | {message: "登録成功"}    |●
+| POST   | /api/auth/login    | ログイン     | {email, password}      | {token: "JWTトークン"}   |●
+| GET    | /api/notes         | ユーザーのノート一覧取得 | -          | \[{id, title, content}]  |●
+| POST   | /api/notes         | 新規ノート作成 | {title, content, tags} | {id, title, content}   |●
+| PUT    | /api/notes/{id}    | ノート編集     | {title, content, tags} | {id, title, content}   |●
 | DELETE | /api/notes/{id}    | ノート削除     | -                      | {message: "削除成功"}  |
