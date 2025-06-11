@@ -24,6 +24,9 @@ const [errorMessage, setErrorMessage] = useState('');
     const { username, password } = e.target.elements;
     try{
     await login(username.value, password.value);
+    // 可选：调试或后续用
+const user = JSON.parse(localStorage.getItem("user"));
+console.log("ログインユーザー:", user);
     navigate('/notes');
     }catch(err){
       setErrorMessage(err.message);

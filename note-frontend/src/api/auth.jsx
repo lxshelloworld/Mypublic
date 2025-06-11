@@ -11,7 +11,13 @@ export const login = async (username, password) => {
     // ステータスコードが200以外なら例外を投げる
     throw new Error( 'ログイン失敗: ユーザー名またはパスワードが間違っています');
   }
-
+localStorage.setItem(
+    'user',
+    JSON.stringify({
+      id: data.id,
+      username: data.username,
+    })
+  );
   return data;
 };
 

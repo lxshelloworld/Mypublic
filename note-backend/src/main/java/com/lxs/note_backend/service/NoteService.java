@@ -22,7 +22,10 @@ public class NoteService {
     }
 
     public List<Note> getUserNotes(Long userId) {
-        return noteRepository.findByUserId(userId);
+        List<Note> notes = noteRepository.findByUserId(userId);
+        System.out.println("查询到的笔记数量：" + notes.size());
+        return notes;
+
     }
 
     public Optional<Note> getNoteById(Long id) {

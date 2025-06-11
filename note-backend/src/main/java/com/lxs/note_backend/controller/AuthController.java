@@ -1,6 +1,7 @@
 package com.lxs.note_backend.controller;
 
 import com.lxs.note_backend.dto.LoginRequest;
+import com.lxs.note_backend.security.CustomUserDetails;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,9 +29,14 @@ public class AuthController {
                             request.getUsername(), request.getPassword()
                     )
             );
+            CustomUserDetails userDetails = (CustomUserDetails) auth.getPrincipal();
+            Long userId = userDetails.getUser().getId(); // 获取 user 实体的 id
+            String username = userDetails.getUsername();
 
             response.put("success", true);
             response.put("message", "ログイン成功");
+            response.put("id", userId);
+            response.put("username", username);
             return ResponseEntity.ok(response);
         } catch (AuthenticationException e) {
             response.put("success", false);
