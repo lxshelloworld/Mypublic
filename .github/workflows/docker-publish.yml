@@ -1,9 +1,7 @@
 name: Build and Push Docker Images
 
 on:
-  push:
-    branches: [ "feature4" ] # 或者你用的分支名
-  workflow_dispatch:
+  workflow_dispatch: 
 
 jobs:
   build-and-push-frontend:
