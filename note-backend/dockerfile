@@ -1,0 +1,27 @@
+# 使用官方 OpenJDK 21 镜像作为构建环境
+FROM maven:3.9.6-eclipse-temurin-21 AS build
+
+# 设置工作目录
+WORKDIR /app
+
+# 复制 Maven 配置和源代码
+COPY pom.xml .
+COPY src ./src
+
+# 预下载依赖并构建应用
+RUN mvn clean package -DskipTests
+
+# 使用轻量级 JDK 运行构建产物
+FROM eclipse-temurin:21-jdk-alpine
+
+# 设置工作目录
+WORKDIR /app
+
+# 从上一步复制构建好的 jar 文件
+COPY --from=build /app/target/*.jar app.jar
+
+# 设置容器运行时的端口（可根据实际配置修改）
+EXPOSE 8080
+
+# 启动命令
+ENTRYPOINT ["java", "-jar", "app.jar"]
