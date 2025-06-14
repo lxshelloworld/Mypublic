@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8080/api', // 根据你的 nginx / proxy 配置修改
+  baseURL: import.meta.env.VITE_API_BASE_URL, // 根据你的 nginx / proxy 配置修改
   withCredentials: true, // 如果你用了 cookie 登录认证
 });
 
