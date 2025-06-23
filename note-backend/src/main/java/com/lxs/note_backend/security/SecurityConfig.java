@@ -44,8 +44,8 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.allowCredentials(true);
-        config.allowedOriginPatterns("*");  // 前端地址
+        config.setAllowCredentials(true);
+        config.setAllowedOriginPatterns(List.of("*"));
         config.addAllowedHeader("*");
         config.addAllowedMethod("*"); // GET, POST, OPTIONS, PUT, DELETE ...
 
