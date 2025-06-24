@@ -19,7 +19,7 @@ public class NoteController {
     }
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<?> getUserNotes(@PathVariable Long userId) {
+    public ResponseEntity<?> getUserNotes(@PathVariable("userId") Long userId) {
         return ResponseEntity.ok(noteService.getUserNotes(userId));
     }
 
