@@ -1,4 +1,4 @@
-name: Build and Push Image For backend
+name: Build and Push Image For Backend
 
 on:
   workflow_dispatch: 
