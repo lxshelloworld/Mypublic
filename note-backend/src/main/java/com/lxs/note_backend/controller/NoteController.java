@@ -24,18 +24,18 @@ public class NoteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getNoteById@PathVariable("id")  Long id) {
+    public ResponseEntity<?> getNoteById(@PathVariable("id") Long id) {
         return ResponseEntity.of(noteService.getNoteById(id));
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateNote(@PathVariable Long id, @RequestBody Note note) {
+    public ResponseEntity<?> updateNote(@PathVariable("id") Long id, @RequestBody Note note) {
         note.setId(id);
         return ResponseEntity.ok(noteService.updateNote(note));
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteNote(@PathVariable Long id) {
+    public ResponseEntity<?> deleteNote(@PathVariable("id") Long id) {
         noteService.deleteNote(id);
         return ResponseEntity.ok().build();
     }
