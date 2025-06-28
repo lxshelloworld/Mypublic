@@ -43,8 +43,8 @@ jobs:
             hostname
             date
             podman pull lfortest/note-backend:latest
-            podman stop note-backend || true
-            podman rm note-backend || true
+            podman stop my-backend || true
+            podman rm my-backend || true
             podman run -d \
               --name my-backend \
               --network network1 \
