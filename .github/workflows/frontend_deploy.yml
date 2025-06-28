@@ -1,4 +1,4 @@
-name: Build and Deploy Images For Frontend
+name: Deploy Docker For Frontend
 
 on:
   workflow_dispatch: 
@@ -25,3 +25,4 @@ jobs:
            context: ./note-frontend
            push: true
            tags: lfortest/note-frontend:latest
+ 
