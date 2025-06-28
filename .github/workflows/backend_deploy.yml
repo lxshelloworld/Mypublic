@@ -39,9 +39,20 @@ jobs:
       - name: Deploy on GCP VM via SSH
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.VM_USER }}@${{ secrets.VM_HOST }} << 'EOF'
-            docker pull lfortest/note-frontend:latest
-            docker stop note-frontend || true
-            docker rm note-frontend || true
-            docker run -d --name note-frontend -p 80:3000 lfortest/note-frontend:latest
-            docker image prune -f
+            echo "✅ SSH connection to GCP VM successful"
+            hostname
+            date
+            podman pull lfortest/note-frontend:latest
+            podman note-frontend || true
+            podman rm note-frontend || true
+            podman run -d \
+              --name my-backend \
+              --network network1 \
+              -e SPRING_DATASOURCE_URL=jdbc:postgresql://my-postgres:5432/myappdb \
+              -e SPRING_DATASOURCE_USERNAME=postgres \
+              -e SPRING_DATASOURCE_PASSWORD=123456 \
+              -p 8080:8080 \
+              docker.io/lfortest/note-backend
+            podman image prune -f
+            echo "✅ Deployment completed."
           EOF
