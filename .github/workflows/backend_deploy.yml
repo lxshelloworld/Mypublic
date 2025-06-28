@@ -1,4 +1,4 @@
-name: Build and Push and Deploy Docker Image
+name: Deploy Docker For Backend
 
 on:
   workflow_dispatch: 
