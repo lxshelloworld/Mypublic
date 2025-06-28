@@ -25,4 +25,30 @@ jobs:
            context: ./note-frontend
            push: true
            tags: lfortest/note-frontend:latest
- 
+           
+  deploy-to-gcp:
+    name: Deploy to GCP VM
+    runs-on: ubuntu-latest
+    needs: build-and-push-frontend
+    steps:
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VM_SSH_KEY_F }}
+
+      - name: Deploy on GCP VM via SSH
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.VM_USER_F }}@${{ secrets.VM_HOST_F }} << 'EOF'
+            echo "✅ SSH connection to GCP VM successful"
+            hostname
+            date
+            podman pull lfortest/note-frontend:latest
+            podman stop my-frontend || true
+            podman rm my-frontend || true
+            podman run -d \
+              --name my-frontend \
+              -p 8080:80 \
+              docker.io/lfortest/note-frontend
+            podman image prune -f
+            echo "✅ Deployment completed."
+          EOF 
