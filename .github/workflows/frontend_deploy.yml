@@ -51,4 +51,4 @@ jobs:
               docker.io/lfortest/note-frontend
             podman image prune -f
             echo "✅ Deployment completed."
-          EOF 
+          EOF
