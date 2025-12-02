@@ -1,6 +1,8 @@
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
 export const login = async (username, password) => {
   // 替换为实际 API 地址
-  const res = await fetch('http://localhost:8080/api/auth/login', {
+  const res = await fetch(`${baseUrl}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, password }),
@@ -22,7 +24,7 @@ localStorage.setItem(
 };
 
 export const register = async (username, email, password) => {
-  const res = await fetch('http://localhost:8080/api/auth/register', {
+  const res = await fetch(`${baseUrl}/auth/register`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username, email, password }),

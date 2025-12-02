@@ -44,4 +44,13 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
     }
+
+    // 健康检查端点
+    @GetMapping("/health")
+    public ResponseEntity<Map<String, Object>> healthCheck() {
+        Map<String, Object> response = new HashMap<>();
+        response.put("status", "ok");
+        response.put("message", "Service is healthy");
+        return ResponseEntity.ok(response);
+    }
 }
