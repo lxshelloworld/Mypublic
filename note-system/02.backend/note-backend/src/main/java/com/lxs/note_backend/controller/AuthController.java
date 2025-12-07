@@ -44,12 +44,21 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
     }
+<<<<<<< HEAD:note-backend/src/main/java/com/lxs/note_backend/controller/AuthController.java
       // 健康检查端点
+=======
+
+    // 健康检查端点
+>>>>>>> feature4:note-system/02.backend/note-backend/src/main/java/com/lxs/note_backend/controller/AuthController.java
     @GetMapping("/health")
     public ResponseEntity<Map<String, Object>> healthCheck() {
         Map<String, Object> response = new HashMap<>();
         response.put("status", "ok");
         response.put("message", "Service is healthy");
         return ResponseEntity.ok(response);
+<<<<<<< HEAD:note-backend/src/main/java/com/lxs/note_backend/controller/AuthController.java
     }  
+=======
+    }
+>>>>>>> feature4:note-system/02.backend/note-backend/src/main/java/com/lxs/note_backend/controller/AuthController.java
 }
