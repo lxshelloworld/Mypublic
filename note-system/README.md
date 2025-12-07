@@ -71,13 +71,15 @@
 ```
 ### **目录结构**
 
+```plaintext
 note-system
 ├── 01.docs                # 系统相关设计文档
 ├── 02.note-backend        # Java Spring Boot 后端
 ├── 03.note-frontend       # React 前端
 ├── 04.architecture        # 云部署架构图
 ├── 05.demo                # 系统演示
+```
 
 ### **项目地址**
 
-www.lxshelloworld.com
+[www.lxshelloworld.com](https://lxshelloworld.com/login)
