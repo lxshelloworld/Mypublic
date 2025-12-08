@@ -1,12 +1,24 @@
-# 项目简介
+# 📒 Note System – 前后端分离笔记系统
 
-这是一个简单的前后端分离的笔记系统，包含了用户注册、登录、笔记的添加、修改、删除等功能。项目的具体描述请跳转至[系统介绍](link)。
+一个基于 Spring Boot + React 的前后端分离笔记系统，实现用户认证、笔记管理、容器化部署与云端自动化上线。 项目先后部署在 Google Cloud Platform（GCP） 与 Amazon Web Services（AWS Tokyo），用于学习云端架构设计与 DevOps 实践。
+
+在线演示  https://lxshelloworld.com/login
 
 ---
+## 🚀 1. 项目亮点（Highlights）
 
-# 1.云部分介绍
+- ✔️ 前后端完全分离：React SPA + Spring Boot REST API 
+- ✔️ 笔记增删改查完整功能链路 
+- ✔️ 前端、后端、数据库均实现容器化管理
+- ✔️ Docker 容器化 + GitHub Actions CI/CD 全自动部署 
+- ✔️ 多云部署经验：GCP → AWS Tokyo 
+- ✔️ AWS 实现接近企业级的多可用区架构（Multi-AZ） 
 
-由于这是第一次接触云部署，项目最初托管在 **Google Cloud Platform (GCP)** 上，方便练习和学习。随着对云服务的了解，项目后期迁移到了 **Amazon Web Services (AWS)**，更接近企业级部署。
+## ☁️ 2. 云端部署（Cloud Deployment）
+
+本项目经历两阶段部署：
+1. GCP（初次云部署练习）
+2. AWS Tokyo（企业级部署实践）
 
 ### **GCP 部署**  
 
