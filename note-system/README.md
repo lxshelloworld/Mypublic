@@ -1,3 +1,12 @@
+| 🇨🇳 中文版 | 🇯🇵 日本語版 |
+|------------|------------|
+| [点击查看中文](README-zh.md) | [クリックして日本語を見る](README-jp.md) |
+
+---
+
+[🇨🇳 中文版](README-zh.md) | [🇯🇵 日本語版](README-jp.md)
+
+
 # 📒 Note System – 前后端分离笔记系统
 
 一个基于 Spring Boot + React 的前后端分离笔记系统，实现笔记管理、容器化部署与云端自动化上线。 项目先后部署在 Google Cloud Platform（GCP） 与 Amazon Web Services（AWS Tokyo），用于学习云端架构设计与 DevOps 实践。
