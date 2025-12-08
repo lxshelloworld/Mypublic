@@ -1,6 +1,6 @@
 # 📒 Note System – 前后端分离笔记系统
 
-一个基于 Spring Boot + React 的前后端分离笔记系统，实现用户认证、笔记管理、容器化部署与云端自动化上线。 项目先后部署在 Google Cloud Platform（GCP） 与 Amazon Web Services（AWS Tokyo），用于学习云端架构设计与 DevOps 实践。
+一个基于 Spring Boot + React 的前后端分离笔记系统，实现笔记管理、容器化部署与云端自动化上线。 项目先后部署在 Google Cloud Platform（GCP） 与 Amazon Web Services（AWS Tokyo），用于学习云端架构设计与 DevOps 实践。
 
 在线演示  https://lxshelloworld.com/login
 
@@ -86,27 +86,20 @@
 | ECR               | 容器镜像仓库，用于存储 Docker 镜像       |
 
 
-**部署流程**
-1. 在 **VPC** 内创建多个子网，分别部署 ECS 和 RDS。
-2. 使用 **ELB** 分发流量，确保高可用性。
-3. 配置 **NAT Gateway**，使私有子网能够访问互联网。
-4. 部署 **ECS** 容器化应用，通过 **ECS Fargate** 实现自动扩展。
-5. 配置 **RDS** 实例，提供数据库服务。
+**特点：**
+1. 多可用区（Multi-AZ）部署，保证高可用性
+2. ECS Fargate 自动扩展容器
+3. RDS 托管数据库，私有子网安全访问
+4. ELB 分流、CloudFront 提供 CDN 加速
 
 
 **设计方针：**
 1. **费用控制**：优先选择不产生费用的服务，必要时使用重要的付费服务。
 2. **目标**：尽量在免费额度内使用多种服务。
-3. **遵循 AWS 设计原则**：
-   - **安全性**  
-   - **可用性**  
-   - **高性能**  
-   - **成本优化**  
-   - **卓越运营**  
-   - **可持续性**
+3. **遵循 AWS 设计原则**
 
 
-**网络结构图**
+**网络结构图：**
 
 [awsネットワーク.pdf](./04.architecture/02.AWS/awsネットワーク.pdf)
 
