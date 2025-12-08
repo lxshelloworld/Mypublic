@@ -61,7 +61,9 @@
 部署在 **AWS Tokyo Region** ，构建接近实际企业生产环境的高可用架构（Multi-AZ）。
 
 **架构图：**
+
 <img width="741" height="456" alt="image" src="https://github.com/user-attachments/assets/4a7c995b-1c26-4d86-8522-9b3ca8b9b03c" />
+
 
 **系统组件：**
 | 组件              | 描述                                      |
