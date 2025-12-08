@@ -1,4 +1,4 @@
-[🇨🇳 英文版](README-en.md) | [🇯🇵 日語版](README-jp.md)
+[en 英文版](README-en.md) | [🇯🇵 日語版](README.md)
 ---
 
 # 📒 Note System – 前后端分离笔记系统
@@ -132,6 +132,8 @@
 | 容器化       | Docker, Docker Compose | 自动化环境构建和统一管理          |                           |
 | CI/CD         | GitHub Actions      | 自动化构建、测试和部署             |                           |
 
+---
+
 ## 📁 4.目录结构（Repository Structure）
 
 ```plaintext
@@ -145,6 +147,7 @@ note-system
 ├── 05.demo                # 系统演示
 ├── README.md              # 项目说明
 ```
+---
 
 ## 🔗 5.访问地址
 - 📦 GitHub 仓库：https://github.com/lxshelloworld/Mypublic/note-system
