@@ -1,4 +1,4 @@
-# 📒 Note System – 前后端分离笔记系统
+<img width="1763" height="707" alt="image" src="https://github.com/user-attachments/assets/cc768001-738d-4e44-8293-c80b6b56b772" /># 📒 Note System – 前后端分离笔记系统
 
 一个基于 Spring Boot + React 的前后端分离笔记系统，实现用户认证、笔记管理、容器化部署与云端自动化上线。 项目先后部署在 Google Cloud Platform（GCP） 与 Amazon Web Services（AWS Tokyo），用于学习云端架构设计与 DevOps 实践。
 
@@ -28,8 +28,8 @@
 使用 Google Cloud 部署，结合 Docker 容器化和 CI/CD 流程，实现自动化部署。 用于学习云基础部署、DNS、容器管理与 CI/CD。
 
 **架构图：**
+<img width="1763" height="707" alt="GCP" src="https://github.com/user-attachments/assets/9423133d-47a2-48b8-ad27-0d7619991e4f" />
 [GCPクラウド構築.pdf](./04.architecture/01.GCP/GCPクラウド構築.pdf)
-
 
 **使用的技术：**
 | 技术栈        | 用途                                      |
@@ -55,13 +55,13 @@
   
 ---
 
-### **AWS 部署**  
+### 2.2 AWS 部署 （2025/10-2026/1）**  
 
 **架构概述：**
-部署在 **AWS Tokyo Region** 的架构图，展示了使用多可用区（AZ）来实现高可用性和容错能力的架构。（运行期2025/10-2026/1）
+部署在 **AWS Tokyo Region** ，构建接近实际企业生产环境的高可用架构（Multi-AZ）。
 
 **架构图：**
-
+![AWS](https://github.com/user-attachments/assets/f8f7d40e-dbcb-4314-90d3-db91559cb8f4)
 
 **系统组件：**
 | 组件              | 描述                                      |
@@ -99,12 +99,13 @@
    - **可持续性**
 
 **网络结构图**
+[awsネットワーク.pdf]./04.architecture/02.AWS/awsネットワーク.pdf
 
 ---
 
-# 2.系统部分介绍
+## 🧩3.系统部分介绍
 
-### **系统功能**
+**系统功能**
 
 | 功能名         | 描述                                      |
 | -------------- | ---------------------------------------- |
@@ -115,7 +116,7 @@
 | 笔记编辑      | 编辑已有笔记                             |
 | 笔记删除      | 删除不需要的笔记（带确认对话框）         |
 
-### **系统技术栈**
+**系统技术栈**
 
 | 层（组件）    | 技术               | 描述                              | 版本                      |
 | ------------- | ------------------ | --------------------------------- | ------------------------- |
@@ -125,7 +126,7 @@
 | 容器化       | Docker, Docker Compose | 自动化环境构建和统一管理          |                           |
 | CI/CD         | GitHub Actions      | 自动化构建、测试和部署             |                           |
 
-### **系统架构图**
+**系统架构图**
 
 ```plaintext
 +--------------------+            +-------------------+           +----------------+
@@ -142,17 +143,21 @@
                                                             |    数据库          |
                                                             +--------------------+
 ```
-### **目录结构**
+## 📁 4.目录结构（Repository Structure）
 
 ```plaintext
 note-system
 ├── 01.docs                # 系统相关设计文档
-├── 02.note-backend        # Java Spring Boot 后端
-├── 03.note-frontend       # React 前端
+├── 02.backend        
+   └── note-backend/ # Spring Boot 后端 
+├── 03.frontend      
+   └── note-frontend/ # React 前端 
 ├── 04.architecture        # 云部署架构图
 ├── 05.demo                # 系统演示
+├── README.md              # 项目说明
 ```
 
-### **项目地址**
-
-[www.lxshelloworld.com](https://lxshelloworld.com/login)
+## 🔗 5.访问地址
+📦 GitHub 仓库：https://github.com/lxshelloworld/Mypublic/note-system
+🐳 DockerHub 仓库：https://hub.docker.com/repositories/lfortest
+🌍 线上 Demo：https://lxshelloworld.com/login 
