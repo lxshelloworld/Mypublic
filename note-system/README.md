@@ -1,4 +1,4 @@
-<img width="1763" height="707" alt="image" src="https://github.com/user-attachments/assets/cc768001-738d-4e44-8293-c80b6b56b772" /># 📒 Note System – 前后端分离笔记系统
+# 📒 Note System – 前后端分离笔记系统
 
 一个基于 Spring Boot + React 的前后端分离笔记系统，实现用户认证、笔记管理、容器化部署与云端自动化上线。 项目先后部署在 Google Cloud Platform（GCP） 与 Amazon Web Services（AWS Tokyo），用于学习云端架构设计与 DevOps 实践。
 
@@ -55,13 +55,13 @@
   
 ---
 
-### 2.2 AWS 部署 （2025/10-2026/1）**  
+### 2.2 AWS 部署 （2025/10-2026/1） 
 
 **架构概述：**
 部署在 **AWS Tokyo Region** ，构建接近实际企业生产环境的高可用架构（Multi-AZ）。
 
 **架构图：**
-![AWS](https://github.com/user-attachments/assets/f8f7d40e-dbcb-4314-90d3-db91559cb8f4)
+<img width="1763" height="707" alt="image" src="https://github.com/user-attachments/assets/cc768001-738d-4e44-8293-c80b6b56b772" />
 
 **系统组件：**
 | 组件              | 描述                                      |
@@ -158,6 +158,6 @@ note-system
 ```
 
 ## 🔗 5.访问地址
-📦 GitHub 仓库：https://github.com/lxshelloworld/Mypublic/note-system
-🐳 DockerHub 仓库：https://hub.docker.com/repositories/lfortest
-🌍 线上 Demo：https://lxshelloworld.com/login 
+- 📦 GitHub 仓库：https://github.com/lxshelloworld/Mypublic/note-system
+- 🐳 DockerHub 仓库：https://hub.docker.com/repositories/lfortest
+- 🌍 线上 Demo：https://lxshelloworld.com/login 
