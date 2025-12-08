@@ -1,11 +1,5 @@
-| 🇨🇳 中文版 | 🇯🇵 日本語版 |
-|------------|------------|
-| [点击查看中文](README-zh.md) | [クリックして日本語を見る](README-jp.md) |
-
+[🇨🇳 英文版](README-en.md) | [🇯🇵 日語版](README-jp.md)
 ---
-
-[🇨🇳 中文版](README-zh.md) | [🇯🇵 日本語版](README-jp.md)
-
 
 # 📒 Note System – 前后端分离笔记系统
 
