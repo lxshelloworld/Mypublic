@@ -1,4 +1,4 @@
-[🇨🇳 英語版](README-en.md) | [🇯🇵 中国語版](README-zh.md)
+[en 英語版](README-en.md) | [cn 中国語版](README-zh.md)
 ---
 
 # 📒 Note System – 前後端分離ノートシステム
@@ -133,6 +133,8 @@ AWS Tokyo リージョンにデプロイし、企業レベルに近い 高可用
 | コンテナ化     | Docker, Docker Compose | 環境構築・管理の自動化     |                           |
 | CI/CD         | GitHub Actions      | 自動構築・テスト・デプロイ     |                           |
 
+---
+
 ## 📁 4.ディレクトリ構造（Repository Structure）
 
 ```plaintext
@@ -146,6 +148,7 @@ note-system
 ├── 05.demo                # システムデモ
 ├── README.md              # プロジェクト説明
 ```
+---
 
 ## 🔗 5.参照リンク
 - 📦 GitHub リポジトリ：https://github.com/lxshelloworld/Mypublic/note-system
