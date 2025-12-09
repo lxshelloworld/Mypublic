@@ -6,7 +6,8 @@
 Spring Boot + React を用いた前後端分離型のノートシステムです。ノート管理、コンテナ化によるデプロイ、クラウド上での自動デプロイを実現しています。
 本プロジェクトは Google Cloud Platform（GCP）および Amazon Web Services（AWS Tokyo）にデプロイされ、クラウドアーキテクチャ設計や DevOps 実践の学習を目的としています。
 
-オンラインデモ: https://lxshelloworld.com/login
+- オンラインウェブサイト（2025/11-2026/01）: https://lxshelloworld.com/login
+- デモ動画：https://lxshelloworld.github.io/Mypublic/
 
 ---
 ## 🚀 1. プロジェクトのハイライト（Highlights）
