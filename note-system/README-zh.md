@@ -5,8 +5,8 @@
 
 一个基于 Spring Boot + React 的前后端分离笔记系统，实现笔记管理、容器化部署与云端自动化上线。 项目先后部署在 Google Cloud Platform（GCP） 与 Amazon Web Services（AWS Tokyo），用于学习云端架构设计与 DevOps 实践。
 
-在线网站（2025/11-2O26/01）https://lxshelloworld.com/login
-演示视频  [https://lxshelloworld.com/login](https://lxshelloworld.github.io/Mypublic/)
+- 在线网站（2025/11-2O26/01）：https://lxshelloworld.com/login
+- 演示视频 ：[https://lxshelloworld.com/login](https://lxshelloworld.github.io/Mypublic/)
 
 ---
 ## 🚀 1. 项目亮点（Highlights）
