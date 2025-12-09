@@ -7,7 +7,8 @@ This project is a frontend-backend separated note-taking system built with Sprin
 It supports note management, containerized deployment, and automated cloud deployment.
 The system has been deployed on Google Cloud Platform (GCP) and Amazon Web Services (AWS Tokyo) as part of learning cloud architecture design and DevOps practices.
 
-Online Demo: https://lxshelloworld.com/login
+- Online Website (2025/11-2026/01): https://lxshelloworld.com/login
+- Demo Video: https://lxshelloworld.github.io/Mypublic/
 
 ---
 ## 🚀 1. Project Highlights
