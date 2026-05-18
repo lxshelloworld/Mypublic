@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: incident-ticket-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/incident_ticket_db
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  # H2 配置（测试用，生产环境注释掉）
+  # datasource:
+  #   url: jdbc:h2:mem:testdb
+  #   driver-class-name: org.h2.Driver
+  #   username: sa
+  #   password: password
+  # h2:
+  #   console:
+  #     enabled: true
+  #     path: /h2-console

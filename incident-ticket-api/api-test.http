@@ -1,0 +1,153 @@
+### 工单管理 API 测试脚本
+### 在 IntelliJ IDEA 中，可以直接点击请求左边的箭头运行
+
+@host = http://localhost:8080
+@contentType = application/json
+
+### 1. 创建工单
+POST {{host}}/api/tickets
+Content-Type: {{contentType}}
+
+{
+  "title": "数据库连接故障",
+  "description": "生产环境 MySQL 无法连接",
+  "priority": "CRITICAL",
+  "systemName": "payment-system",
+  "assignee": "张三"
+}
+
+### 2. 创建第二个工单
+POST {{host}}/api/tickets
+Content-Type: {{contentType}}
+
+{
+  "title": "API 超时问题",
+  "description": "用户反馈 API 响应时间过长",
+  "priority": "HIGH",
+  "systemName": "api-gateway",
+  "assignee": "李四"
+}
+
+### 3. 创建第三个工单
+POST {{host}}/api/tickets
+Content-Type: {{contentType}}
+
+{
+  "title": "文档更新",
+  "description": "更新 API 文档和使用说明",
+  "priority": "LOW",
+  "systemName": "documentation"
+}
+
+### 4. 获取所有工单
+GET {{host}}/api/tickets
+Content-Type: {{contentType}}
+
+### 5. 按状态筛选 - 获取所有开放工单
+GET {{host}}/api/tickets?status=OPEN
+Content-Type: {{contentType}}
+
+### 6. 按优先级筛选 - 获取所有高优先级工单
+GET {{host}}/api/tickets?priority=HIGH
+Content-Type: {{contentType}}
+
+### 7. 按优先级筛选 - 获取所有关键工单
+GET {{host}}/api/tickets?priority=CRITICAL
+Content-Type: {{contentType}}
+
+### 8. 按系统名筛选
+GET {{host}}/api/tickets?systemName=payment-system
+Content-Type: {{contentType}}
+
+### 9. 多条件筛选 - 开放且高优先级
+GET {{host}}/api/tickets?status=OPEN&priority=HIGH
+Content-Type: {{contentType}}
+
+### 10. 多条件筛选 - 所有条件
+GET {{host}}/api/tickets?status=OPEN&priority=CRITICAL&systemName=payment-system
+Content-Type: {{contentType}}
+
+### 11. 获取工单详情 (id=1)
+GET {{host}}/api/tickets/1
+Content-Type: {{contentType}}
+
+### 12. 获取工单详情 (id=2)
+GET {{host}}/api/tickets/2
+Content-Type: {{contentType}}
+
+### 13. 获取不存在的工单 (应返回 404)
+GET {{host}}/api/tickets/999
+Content-Type: {{contentType}}
+
+### 14. 更新工单状态为 INVESTIGATING
+PATCH {{host}}/api/tickets/1/status
+Content-Type: {{contentType}}
+
+"INVESTIGATING"
+
+### 15. 更新工单状态为 RESOLVED
+PATCH {{host}}/api/tickets/1/status
+Content-Type: {{contentType}}
+
+"RESOLVED"
+
+### 16. 更新工单状态为 CLOSED
+PATCH {{host}}/api/tickets/1/status
+Content-Type: {{contentType}}
+
+"CLOSED"
+
+### 17. 更新负责人
+PATCH {{host}}/api/tickets/2/assignee
+Content-Type: {{contentType}}
+
+"王五"
+
+### 18. 更新处理备注
+PATCH {{host}}/api/tickets/2/note
+Content-Type: {{contentType}}
+
+"已启动调查，预计 2 小时内解决"
+
+### 19. 更新处理备注 - 第二条工单
+PATCH {{host}}/api/tickets/1/note
+Content-Type: {{contentType}}
+
+"问题已解决，已验证"
+
+### 20. 删除工单 (id=3)
+DELETE {{host}}/api/tickets/3
+Content-Type: {{contentType}}
+
+### 21. 验证删除 - 尝试获取已删除的工单 (应返回 404)
+GET {{host}}/api/tickets/3
+Content-Type: {{contentType}}
+
+### 22. 最终状态 - 获取所有工单列表
+GET {{host}}/api/tickets
+Content-Type: {{contentType}}
+
+### 测试错误情况
+
+### 23. 创建工单时缺少标题 (应返回 400)
+POST {{host}}/api/tickets
+Content-Type: {{contentType}}
+
+{
+  "description": "没有标题的工单",
+  "priority": "HIGH"
+}
+
+### 24. 更新状态为非法值 (应返回 400)
+PATCH {{host}}/api/tickets/1/status
+Content-Type: {{contentType}}
+
+"INVALID_STATUS"
+
+### 25. 删除不存在的工单 (应返回 404)
+DELETE {{host}}/api/tickets/999
+Content-Type: {{contentType}}
+
+### H2 数据库控制台
+### 浏览器访问: http://localhost:8080/h2-console
+
